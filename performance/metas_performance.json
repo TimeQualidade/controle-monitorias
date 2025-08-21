@@ -1,0 +1,17 @@
+[
+    {
+        "monitor": "Ana Souza",
+        "meta_diaria": 5,
+        "meta_mensal": 100
+    },
+    {
+        "monitor": "Carlos Lima",
+        "meta_diaria": 4,
+        "meta_mensal": 80
+    },
+    {
+        "monitor": "Juliana Alves",
+        "meta_diaria": 6,
+        "meta_mensal": 120
+    }
+]

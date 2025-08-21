@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ficha de Monitoria</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
+        h1 { color: #104E8B; }
+        form { background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 700px; margin-bottom: 30px; }
+        label, input, select, textarea, button { display: block; margin: 10px 0; padding: 8px; width: 100%; }
+        button { background-color: #1E90FF; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .back { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Ficha de Monitoria</h1>
+    <form action="salvar_ficha.py" method="post">
+        <label>Nome do Cliente:</label>
+        <input type="text" name="cliente" required>
+
+        <label>Contrato:</label>
+        <input type="text" name="contrato" required>
+
+        <label>Contato do Cliente:</label>
+        <input type="text" name="contato" required>
+
+        <label>Motivo da Monitoria:</label>
+        <select name="motivo" required>
+            
+        </select>
+
+        <label>Canal da Monitoria:</label>
+        <select name="canal" required>
+            <option value="WhatsApp">WhatsApp</option>
+            <option value="Telefonia">Telefonia</option>
+        </select>
+
+        <label>Duração do Atendimento:</label>
+        <input type="text" name="duracao" required>
+
+        <label>Resultado da Monitoria:</label>
+        <select name="resultado" required>
+            <option value="encontrado">Encontrado</option>
+            <option value="nao_se_aplica">Não se aplica</option>
+            <option value="nao_encontrado">Não encontrado</option>
+            <option value="zeramento">Zeramento (falha grave)</option>
+        </select>
+
+        <button type="submit">Salvar Ficha</button>
+    </form>
+
+    <div class="back">
+        <a href="../index.html">Voltar à Página Inicial</a>
+    </div>
+</body>
+</html>

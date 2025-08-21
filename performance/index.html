@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Controle de Performance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            color: #104E8B;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+        label, input, button {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+        }
+        button {
+            background-color: #1E90FF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Controle de Performance dos Monitores</h1>
+    <form action="salvar_metas.py" method="post">
+        <label for="monitor">Nome do Monitor:</label>
+        <input type="text" name="monitor" required>
+
+        <label for="meta_diaria">Meta Diária:</label>
+        <input type="number" name="meta_diaria" required>
+
+        <label for="meta_mensal">Meta Mensal:</label>
+        <input type="number" name="meta_mensal" required>
+
+        <button type="submit">Salvar Metas</button>
+    </form>
+
+    <div class="back">
+        <a href="../index.html">Voltar à Página Inicial</a>
+    </div>
+</body>
+</html>

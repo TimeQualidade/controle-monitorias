@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ambiente do Monitor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            color: #104E8B;
+        }
+        .monitoria {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label, select, input, textarea, button {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+        }
+        button {
+            background-color: #1E90FF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ambiente do Monitor</h1>
+
+    <div class="monitoria">
+        <form action="salvar_status.py" method="post">
+            <label for="time">Time:</label>
+            <input type="text" name="time" required>
+
+            <label for="consultor">Consultor:</label>
+            <input type="text" name="consultor" required>
+
+            <label for="status">Status da Monitoria:</label>
+            <select name="status" required>
+                <option value="realizada">Realizada</option>
+                <option value="nao_realizada">Não Realizada</option>
+                <option value="pendente">Pendente</option>
+            </select>
+
+            <label for="observacao">Observação (obrigatória se não realizada):</label>
+            <textarea name="observacao"></textarea>
+
+            <button type="submit">Salvar Status</button>
+        </form>
+    </div>
+
+    <div class="back">
+        <a href="../index.html">Voltar à Página Inicial</a>
+    </div>
+</body>
+</html>

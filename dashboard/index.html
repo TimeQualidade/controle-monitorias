@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel de Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            color: #104E8B;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+        label, input, select, textarea, button {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+        }
+        button {
+            background-color: #1E90FF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Painel de Feedback</h1>
+    <form action="salvar_feedback.py" method="post">
+        <label for="consultor">Consultor:</label>
+        <input type="text" name="consultor" required>
+
+        <label for="criterios">Nota dos critérios (separados por vírgula):</label>
+        <input type="text" name="criterios" placeholder="Ex: 8,9,10" required>
+
+        <label for="pesos">Pesos dos critérios (separados por vírgula):</label>
+        <input type="text" name="pesos" placeholder="Ex: 1,2,1" required>
+
+        <label for="observacao">Observação:</label>
+        <textarea name="observacao" required></textarea>
+
+        <label for="melhoria">Frase de melhoria personalizada:</label>
+        <input type="text" name="melhoria" required>
+
+        <button type="submit">Enviar Feedback</button>
+    </form>
+
+    <div class="back">
+        <a href="../index.html">Voltar à Página Inicial</a>
+    </div>
+</body>
+</html>
